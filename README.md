@@ -1,4 +1,25 @@
+## 这个项目页面是单个Github账号下添加多个 Github Pages 的相关尝试与结果。
+#### 场景描述：   
+- 当你在GitHub上已经有了一个和用户名同名的GitHub Pages项目当作个人主页(username.github.io)，还想尝试创建更多的Github Pages当个人主页，并且使用自定义域名。
 
+#### 相关Github Pages的规则：
+
+1. 个人主页必须要和用户的GitHub帐号同名，所以每个用户有且`只能有一个`repo作为个人主页，且必须是`<username>/<username>.github.io`的形式；
+2. 项目主页的GitHub二级域名为`<username>.github.io/<projectname>`，这种有点类似于通过文件夹的方式进行索引进入的，它没有`<projectname>.<username>.github.io`这种方式，所以可以拥有的`数量为任意个`。
+
+### 解决：
+1. 在相关项目的repo里新建一个CNAME文件，并将不带协议名的裸域名写进去(`domain.com` 而不是 `https://domain.com`).
+	> 这一步可以参考一下[官方文档](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain)
+2. 到你域名的DNS服务商里给对应的二级域名添加CNAME解析到`<username>.github.io`(和个人主页的配置相同)
+3. 等待DNS生效，具体时间和服务商有关（几分钟到几小时都有可能）
+4. 然后打开`domain.com` ，就能进入你项目页的Github Page了
+5. 创建多个项目，重复进行1-4步骤，进行自定义域名。这样每个项目都有了一个独立的域名。
+**这里演示的是使用顶级域名，如果需要使用二级or三级域名，相应的进行修改和CNAME设置就行了。**
+
+#### 后续
+##### 在演示进行试验的过程中发现一个有趣的问题，个人主页下的文件夹是通过 `username.github.io/files/`
+
+---------------------------------
 
 ![](https://raw.githubusercontent.com/qiubaiying/qiubaiying.github.io/master/img/readme-home.png)
 
