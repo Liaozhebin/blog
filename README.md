@@ -19,6 +19,7 @@
 #### 后续
 ##### Project-name 与 个人主页 的冲突
 - 在演示进行试验的过程中发现一个有趣的问题，个人主页下的文件夹是通过 `username.github.io/files/`来访问的，而项目页面也是通过`username.github.io/Project-name/`来访问的，这里就产生了一个冲突问题，当个人主页下的文件夹`files`**=**`Project-name`的时候，访问网址是一样的。
+
 **冲突结果**
 > 通过亲自测试，发现当 `files`**=**`Project-name`的时候，访问时，将会进入`Project-name`的项目页面，**即：`Project-Page`的优先级是高与个人主页的子文件夹**
 
