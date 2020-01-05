@@ -2,7 +2,7 @@
 #### 场景描述：   
 - 当你在GitHub上已经有了一个和用户名同名的GitHub Pages项目当作个人主页(username.github.io)，还想尝试创建更多的Github Pages当个人主页，并且使用自定义域名。
 
-#### 相关Github Pages的规则：
+#### Github Pages的规则：
 
 1. 个人主页必须要和用户的GitHub帐号同名，所以每个用户有且`只能有一个`repo作为个人主页，且必须是`<username>/<username>.github.io`的形式；
 2. 项目主页的GitHub二级域名为`<username>.github.io/<projectname>`，这种有点类似于通过文件夹的方式进行索引进入的，它没有`<projectname>.<username>.github.io`这种方式，所以可以拥有的`数量为任意个`。
@@ -16,8 +16,8 @@
 5. 创建多个项目，重复进行1-4步骤，进行自定义域名。这样每个项目都有了一个独立的域名。
 **这里演示的是使用顶级域名，如果需要使用二级or三级域名，相应的进行修改和CNAME设置就行了。**
 
-#### 后续
-##### Project-name 与 个人主页 的冲突
+### 后续
+#### Project-name 与 个人主页 的冲突
 - 在演示进行试验的过程中发现一个有趣的问题，个人主页下的文件夹是通过 `username.github.io/files/`来访问的，而项目页面也是通过`username.github.io/Project-name/`来访问的，这里就产生了一个冲突问题，当个人主页下的文件夹`files`**=**`Project-name`的时候，访问网址是一样的。
 
 **冲突结果**
